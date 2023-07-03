@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Peliculas HD</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+        crossorigin="anonymous">
+        <link rel="icon" href="../img/favicon.png">
+    </head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="btn btn-outline-light" href="../templates/peliculas.html">Inicio</a>
+                <a class="btn btn-outline-light" href="../templates/pelicula_nuevo.html">Nueva Pelicula</a>                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section style="background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);">
+            <div id="app" class="container">
+                <br>
+                <h1 style="text-align:center">Peliculas en HD</h1>
+                <br>
+
+                <div v-if="error">
+                    <p>Lo sentimos , ........</p>
+                </div>
+                <div v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+                    </section>
+                    <section v-else>
+
+                        <tbody>
+                            <div class="row row-cols-1 row-cols-md-3 g-3">
+                                <div class="col" v-for="pelicula in peliculas">
+                                <div class="card">                                
+                                    <img :height="450" :src="pelicula.imagen" class="card-img-top" :alt="pelicula.nombre">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{pelicula.titulo}}</h5>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                        <a class="btn btn-outline-dark" :href="'./pelicula_view.html?id='+ pelicula.id" >Detalles</a>
+                                        <a class="btn btn-outline-dark" :href="'./pelicula_update.html?id='+ pelicula.id" >Editar</a>
+                                        <button type="button" class="btn btn-outline-danger" v-on:click="eliminar(pelicula.id)" >Eliminar</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>    
+                        </tbody>
+                    </section>
+                </div>
+            </div>
+            <br>
+        </section>
+        
+    </main>
+
+<footer class="py-3 bg-dark">    
+    <div class="container"><p class="m-0 text-center text-white">Proyecto Final &copy; Codo a Codo 4.0</p></div>
+</footer>
+<script>
+<!--Link de Bootstrap-->
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+crossorigin="anonymous"</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+crossorigin="anonymous"></script>
+<!-- <script src="../js/main.js"></script> -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+<script src="../js/peliculas.js"></script>
+</body>
+</html>
