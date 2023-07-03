@@ -60,7 +60,7 @@ redirect: 'follow'
 fetch(this.url, options)
 .then(function () {
 alert("Registro guardado")
-window.location.href = "../templates/peliculas.html";
+window.location.href = "../templates/index.html";
 })
 .catch(err => {
 console.error(err);
