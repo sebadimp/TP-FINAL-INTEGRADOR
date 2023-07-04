@@ -8,6 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <link rel="icon" href="../img/favicon.png">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <header id="header">
@@ -18,13 +19,14 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     </div>
   </nav>
 </header>
-<main style="background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);">
-    <section >
+<main>
+    <section class="fondoview">
       <br>
-      <h1 style="text-align:center">Información Detallada</h1>
+      <h1 class="titview">Información Detallada</h1>
       <br>
         <div class="row justify-content-sm-center" id="app">
-            <div  class="card border-dark mb-3-sm-center" style="width: 30rem;">
+            <div  class="card border-dark mb-3-sm-center" id="ficha">
+              <br>
                 <img :src="imagen" :height="500" class="card-img-top" :alt="titulo" v-model="imagen">
                 <div class="card-body">
                 <h3 style="text-align:center" class="card-title"> {{titulo}}</h3>
@@ -32,14 +34,15 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
                 <p class="card-text">{{descripcion}}</p>
             </div>
             <ul class="list-group list-group-flush">      
-              <li class="list-group-item"><b>Año:</b> {{anio}} </li>
-              <li class="list-group-item"><b>Duración:</b> {{duracion}} hs.</li>
-              <li class="list-group-item"><b>Genero:</b> {{genero}} </li>
+              <li id="lista" class="list-group-item"><b>Año:</b> {{anio}} </li>
+              <li id="lista" class="list-group-item"><b>Duración:</b> {{duracion}} hs.</li>
+              <li id="lista" class="list-group-item"><b>Genero:</b> {{genero}} </li>
             </ul>
             <div class="card-body">
-              <a class="btn btn-outline-dark"  href="../templates/index.html">Volver</a>
+              <a id="btn" class="btn btn-outline-light"  href="../templates/index.html">Volver</a>
             </div>
         </div>
+        
     </section>
     <br>
 </main>

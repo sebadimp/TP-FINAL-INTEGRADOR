@@ -8,21 +8,24 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
         crossorigin="anonymous">
         <link rel="icon" href="../img/favicon.png">
+        <link rel="stylesheet" href="../css/styles.css">
     </head>
 <body>
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="btn btn-outline-light" href="../templates/index.html">Inicio</a>
-                <a class="btn btn-outline-light" href="../templates/pelicula_nuevo.html">Nueva Pelicula</a>                
+                
+                <a class="btn btn-outline-light" href="../templates/index.html">Home</a>
+                <a class="btn btn-outline-light" href="../templates/pelicula_nuevo.html">Nueva Pelicula</a>
+                <a class="btn btn-outline-light" target="_blank" href="https://sebadimp.pythonanywhere.com/peliculas">BBDD</a>               
             </div>
         </nav>
     </header>
     <main>
-        <section style="background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);">
+        <section class="fondo">
             <div id="app" class="container">
                 <br>
-                <h1 style="text-align:center">Peliculas en HD</h1>
+                <h1 class="titindex">Películas en HD</h1>
                 <br>
 
                 <div v-if="error">
@@ -38,7 +41,7 @@
                         <tbody>
                             <div class="row row-cols-1 row-cols-md-3 g-3">
                                 <div class="col" v-for="pelicula in peliculas">
-                                <div class="card">                                
+                                <div  id="cards" class="card">                                
                                     <img :height="450" :src="pelicula.imagen" class="card-img-top" :alt="pelicula.nombre">
                                     <div class="card-body">
                                     <h5 class="card-title">{{pelicula.titulo}}</h5>

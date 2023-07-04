@@ -1,0 +1,113 @@
+.titindex{
+    text-align: center;
+    color: white;
+    border: 4px whitesmoke solid;
+    background-color: black;
+    border-radius: 2em;
+    align-items: center;
+    width: 15em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;    
+}
+
+.titnuevo{
+    text-align: center;
+    color: white;
+    border: 4px whitesmoke solid;
+    background-color: black;
+    border-radius: 2em;
+    align-items: center;
+    width: 15em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.titview{
+    text-align: center;
+    color: white;
+    border: 4px whitesmoke solid;
+    background-color: black;
+    border-radius: 2em;
+    align-items: center;
+    width: 15em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.titupdate{
+    text-align: center;
+    color: white;
+    border: 4px whitesmoke solid;
+    background-color: black;
+    border-radius: 2em;
+    align-items: center;
+    width: 15em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+
+.fondo{
+    background-image: url("../img/fondoindex.avif");
+    background-repeat: no-repeat;
+    background-size:100%;
+    
+}
+
+.fondonuevo{
+    background-image: url("../img/fondo3.avif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+
+.fondoview{
+    background-image: url("../img/fondoview.avif");
+    background-repeat: no-repeat;
+    background-size:cover
+    
+}
+
+.fondoupdate{
+    background-image: url("../img/fondoupdate.avif");
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+
+#cards{
+    border: 2px black solid;
+}
+
+#form{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 3em;
+    border: 2px black solid;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;   
+    
+}
+
+
+#btn{
+    font-size: 1rem;
+    width: 100%;        
+}
+
+#ficha{
+    width: 30%;
+    color: white;
+    background-color: black;
+}
+
+#lista{
+    color: white;
+    background-color: black;
+}
