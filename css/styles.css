@@ -52,28 +52,28 @@
 
 
 .fondo{
-    background-image: url("../img/fondoindex.avif");
+    background-image: url("../img/fondoindex.jpg");
     background-repeat: no-repeat;
-    background-size:100%;
+    background-size:cover;
     
 }
 
 .fondonuevo{
-    background-image: url("../img/fondo3.avif");
+    background-image: url("../img/fondonuevo.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     
 }
 
 .fondoview{
-    background-image: url("../img/fondoview.avif");
+    background-image: url("../img/fondoview.jpg");
     background-repeat: no-repeat;
     background-size:cover
     
 }
 
 .fondoupdate{
-    background-image: url("../img/fondoupdate.avif");
+    background-image: url("../img/fondoupdate.jpg");
     background-repeat: no-repeat;
     
     background-size: cover;
